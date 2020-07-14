@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+before_action :authenticate_user!
 
   def new
     @post = Post.new
@@ -15,6 +16,10 @@ def create
      redirect_to root_path
      flsh[:notice] = "投稿に失敗しました。"
  end
+end
+
+def index
+  @posts = Post.limit(10).includes(:photos, :user).order('created_at DESC')
 end
 
 private
