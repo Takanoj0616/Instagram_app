@@ -7,16 +7,16 @@ before_action :set_post, only: %i(show destroy)
     @post.photos.build
   end
 
-def create
-  @post = Post.new(post_params)
+  def create
+    @post = Post.new(post_params)
   if @post.photos.present?
-     @post.save
-     redirect_to root_path
-     flsh[:notice] = "投稿が保存されました。"
+    @post.save
+    redirect_to root_path
+    flash[:notice] = "投稿が保存されました"
   else
-     redirect_to root_path
-     flsh[:notice] = "投稿に失敗しました。"
- end
+   redirect_to root_path
+   flash[:alert] = "投稿に失敗しました"
+  end
 end
 
 def index
