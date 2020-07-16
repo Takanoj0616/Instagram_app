@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'inquiries/new'
-  get 'inquiries/confirm'
-  get 'inquiries/thanks'
+  post 'inquiries/confirm'
+  post 'inquiries/thanks'
   devise_for :users,
    controllers: { registrations: 'registrations' }
   root 'posts#index'
