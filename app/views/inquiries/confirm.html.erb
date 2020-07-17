@@ -3,21 +3,21 @@
     <h1 class="confirmPage_title">お問い合わせ内容</h1>
     <%= form_with model: @inquiry, url: inquiries_thanks_path, method: :post, local: true do |f| %>
       <div class="confirmForm_item">
-        <h3>社会の窓が空いている人のお名前</h3>
+        <h3>お名前</h3>
         <div>
           <%= f.hidden_field :name %>
           <%= @inquiry.name %>
         </div>
       </div>
       <div class="confirmForm_item">
-        <h3>社会の窓が空いている人のメールアドレス</h3>
+        <h3>お問い合わせする人のメールアドレス</h3>
         <div>
           <%= f.hidden_field :email %>
           <%= @inquiry.email %>
         </div>
       </div>
       <div class="confirmForm_item">
-        <h3>社会の窓が空いている人との関係</h3>
+        <h3>関係性</h3>
         <div>
           <%= f.hidden_field :relationship %>
           <%= @inquiry.relationship %>
