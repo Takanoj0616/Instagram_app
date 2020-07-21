@@ -1,0 +1,36 @@
+<div class='topPage'>
+  <div class="container">
+    <h1>お問い合わせフォーム</h1>
+    <p>何かありましたら、ご連絡お願いします‼︎
+    </p>
+    <%= form_with(model: @inquiry, url: inquiries_confirm_path, local: true) do |f| %>
+          <% if @inquiry.errors.any? %>
+      <div class="alert alert-danger" role="alert">
+        <strong>入力内容にエラーがあります</strong>
+        <ul>
+          <% @inquiry.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+      <div class="form-group">
+       <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "お名前" %>
+      </div>
+      <div class="form-group">
+       <%= f.label :email %>
+        <%= f.text_field :email, autofocus: true, class: "form-control", placeholder: "メールアドレス" %>
+      </div>
+      <div class="form-group">
+       <%= f.label :relationship %>
+        <%= f.select(:relationship, [["始めて送る", "始めて送る"], ["2回目以降", "2回目以降"]], {}, class: "form-control") %>
+     </div>
+      <div class="form-group">
+        <%= f.label :content %>
+        <%= f.text_area :content, class: "form-control", placeholder: "伝えたいことがあれば入力してください" %>
+      </div>
+       <div class="text-center"><%= f.submit '確認画面へ', class: 'btn btn-primary' %></div>
+    <% end %>
+  </div>
+</div>
