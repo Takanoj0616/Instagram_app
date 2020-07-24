@@ -1,0 +1,35 @@
+.topPage, .confirmPage {
+  margin: 100px 0;
+}
+
+.topPage .btn-primary, .topPage .btn-info, .confirmPage .btn-primary, .confirmPage .btn-info {
+  width: 200px;
+  padding: 10px;
+}
+
+.confirmPage_title {
+  margin-bottom: 50px;
+}
+
+.confirmPage .confirmForm_item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 40px;
+}
+
+.confirmPage .confirmForm_item > h3 {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.confirmPage .btn-info {
+  margin-right: 20px;
+}
+
+.thanksPage {
+  text-align: center;
+}
+
+.thanksPage_message {
+  font-size: 30px;
+}
+/*# sourceMappingURL=inquiries.css.map */

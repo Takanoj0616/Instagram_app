@@ -1,5 +1,9 @@
 {
-  "name": "Instagram_app",
+  "name": "exit",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "version": "exit",
+  "main": "index.js",
+  "repository": "https://github.com/Takanoj0616/Instagram_app.git",
+  "license": "MIT"
 }
