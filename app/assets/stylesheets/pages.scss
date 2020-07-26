@@ -1,18 +1,12 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 body {
-  
-  /* ここから追加 ページの上下に余白を設定 */
   padding-top: 3rem;
   padding-bottom: 3rem;
-  /* ここまで追加 */
-  
   color: #5a5a5a;
 }
 
-/* ここから追加 余白や要素の配置、フォントサイズを設定 */
 .carousel {
   margin-bottom: 4rem;
 }
@@ -50,4 +44,32 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
-/* ここまで追加 */
+
+/* ここから追加 余白や要素の配置、フォントのサイズや太さを設定 */
+.featurette-divider {
+  margin: 5rem 0;
+}
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+@media (min-width: 40em) {
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
