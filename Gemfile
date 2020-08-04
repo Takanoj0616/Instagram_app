@@ -67,3 +67,7 @@ gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
 gem 'dotenv-rails'
 gem 'pg', group: :production
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
